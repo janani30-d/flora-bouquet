@@ -25635,10 +25635,10 @@ body.dark-mode .testimonial .customer{
 
 @media(max-width:1200px){
     header{
-        height:auto;
+        height:80px;
         min-height:80px;
         padding:0 5%;
-        flex-wrap:wrap;
+        flex-wrap:nowrap;
         position:sticky;
     }
 
@@ -25659,7 +25659,10 @@ body.dark-mode .testimonial .customer{
 
     header nav,
     header .header-right{
-        width:100%;
+        position:absolute;
+        left:5%;
+        right:5%;
+        width:auto;
         max-height:0;
         overflow:hidden;
         opacity:0;
@@ -25670,14 +25673,12 @@ body.dark-mode .testimonial .customer{
     }
 
     header nav{
-        order:3;
-        margin-top:0;
+        top:calc(100% + 10px);
         z-index:1001;
     }
 
     header .header-right{
-        order:4;
-        margin-top:0;
+        top:calc(100% + 10px);
         justify-content:center;
         z-index:1001;
     }
@@ -25699,11 +25700,11 @@ body.dark-mode .testimonial .customer{
     }
 
     header.menu-open nav{
-        margin-top:10px;
+        margin-top:0;
     }
 
     header.menu-open .header-right{
-        margin-top:10px;
+        margin-top:0;
     }
 
     header nav ul{
@@ -25750,6 +25751,10 @@ body.dark-mode .testimonial .customer{
         box-shadow:0 18px 40px rgba(0,0,0,.12);
     }
 
+    header.menu-open .header-right{
+        top:calc(100% + 470px);
+    }
+
     body.dark-mode header nav ul,
     body.dark-mode header .header-right{
         background:#1b1f26;
@@ -25768,6 +25773,7 @@ body.dark-mode .testimonial .customer{
 
 @media(max-width:576px){
     header{
+        height:74px;
         min-height:74px;
     }
 
@@ -26377,8 +26383,8 @@ footer,
     }
 
     .occasion-category .occasion-content p{
-        max-width:32ch;
-        min-height:auto;
+        max-width:36ch;
+        min-height:calc(1.6em * 3);
         font-size:14px;
         line-height:1.6;
     }
@@ -26392,5 +26398,118 @@ footer,
     .occasion-category .occasion-content p{
         max-width:100%;
         font-size:14px;
+        min-height:calc(1.6em * 3);
+    }
+}
+
+/* Home 2 hero RTL stability */
+html[dir="rtl"] .hero2-container{
+    justify-content:flex-end;
+    text-align:right;
+}
+
+html[dir="rtl"] .hero2-content{
+    direction:ltr;
+    unicode-bidi:isolate;
+    max-width:min(620px, 100%);
+    margin-left:0;
+    margin-right:auto;
+    text-align:right;
+}
+
+html[dir="rtl"] .hero2-content h1{
+    max-width:100%;
+    font-size:clamp(42px, 5vw, 68px);
+    line-height:1.1;
+    overflow-wrap:normal;
+}
+
+html[dir="rtl"] .hero2-content p{
+    margin-left:0;
+    margin-right:auto;
+}
+
+html[dir="rtl"] .hero-buttons{
+    justify-content:flex-end;
+}
+
+@media(max-width:768px){
+    html[dir="rtl"] .hero2{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    html[dir="rtl"] .hero2-container{
+        width:100%;
+        padding:40px 20px;
+        overflow:hidden;
+        justify-content:flex-end;
+        text-align:right;
+    }
+
+    html[dir="rtl"] .hero2-content h1{
+        font-size:clamp(34px, 10vw, 42px);
+    }
+
+    html[dir="rtl"] .hero2-content p{
+        max-width:100%;
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    html[dir="rtl"] .hero-buttons,
+    html[dir="rtl"] .hero-features{
+        justify-content:flex-end;
+    }
+}
+
+@media(max-width:480px){
+    html[dir="rtl"] .hero-buttons{
+        width:100%;
+    }
+
+    html[dir="rtl"] .hero-buttons a{
+        width:100%;
+        max-width:260px;
+    }
+}
+
+/* Home 2 hero readability and overlap fixes */
+.hero2-content{
+    isolation:isolate;
+}
+
+.hero2-content p,
+.hero-features span{
+    color:#4a4a4f;
+    font-weight:500;
+}
+
+.hero2-content h1{
+    text-shadow:0 2px 14px rgba(255,255,255,.58);
+}
+
+@media(max-width:1100px){
+    .hero2 .offer-card{
+        display:none;
+    }
+
+    .hero2-image::before{
+        background:rgba(255,248,248,.72);
+    }
+
+    body.dark-mode .hero2-image::before{
+        background:rgba(17,19,23,.72);
+    }
+}
+
+@media(max-width:991px){
+    .hero2-content p{
+        max-width:620px;
+        color:#424248;
+    }
+
+    .hero-features{
+        margin-top:42px;
     }
 }
