@@ -299,16 +299,16 @@ outline-offset:4px;
 .hero{
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 90px);
+    min-height: calc(100svh - 90px);
     background: linear-gradient(135deg, #fff8fb 0%, #fff4f7 100%);
     overflow: hidden;
-    padding: 90px 0 90px;
-    margin-top: 30px;
+    padding: 0;
+    margin-top: 0;
 }
 
 .slides{
     width: 100%;
-    height: 100%;
+    min-height: inherit;
     position: relative;
 }
 
@@ -321,7 +321,8 @@ outline-offset:4px;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    padding: 110px 8% 110px;
+    min-height: inherit;
+    padding: clamp(48px, 6vw, 82px) 8%;
     opacity: 0;
     visibility: hidden;
     transition: all .8s ease;
@@ -3634,6 +3635,7 @@ transform:translateY(0);
 
     display:grid;
     grid-template-columns:repeat(4,1fr);
+    align-items:stretch;
     gap:30px;
     margin-top:70px;
     position:relative;
@@ -3671,10 +3673,14 @@ transform:translateY(0);
     background:#fff;
 
     padding:40px 25px;
+    min-height:420px;
 
     border-radius:25px;
 
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
     box-shadow:0 15px 35px rgba(0,0,0,.08);
 
@@ -3699,9 +3705,7 @@ transform:translateY(0);
     width:110px;
     height:110px;
 
-    margin:auto;
-
-    margin-bottom:25px;
+    margin:0 auto 25px;
 
     border-radius:50%;
 
@@ -3776,6 +3780,11 @@ transform:translateY(0);
 .process-card h3{
 
     font-size:26px;
+    line-height:1.25;
+    min-height:65px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
     color:#333;
 
@@ -3788,6 +3797,8 @@ transform:translateY(0);
     color:#666;
 
     line-height:1.8;
+    max-width:280px;
+    min-height:130px;
 
 }
 
@@ -3879,6 +3890,7 @@ transform:translateY(0);
 .artists-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
+    align-items:stretch;
     gap:35px;
     margin-top:60px;
 }
@@ -3893,6 +3905,8 @@ transform:translateY(0);
     overflow:hidden;
     box-shadow:0 18px 40px rgba(0,0,0,.08);
     transition:.4s;
+    display:flex;
+    flex-direction:column;
 }
 
 .artist-card:hover{
@@ -3989,12 +4003,18 @@ transform:translateY(0);
     padding:30px;
 
     text-align:center;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
 }
 
 .artist-content h3{
 
     font-size:28px;
+    line-height:1.25;
+    min-height:35px;
 
     color:#333;
 
@@ -4017,6 +4037,8 @@ transform:translateY(0);
     color:#4CAF50;
 
     font-weight:600;
+    line-height:1.35;
+    min-height:28px;
 
     margin-bottom:18px;
 
@@ -4027,6 +4049,8 @@ transform:translateY(0);
     color:#666;
 
     line-height:1.8;
+    max-width:430px;
+    min-height:88px;
 
 }
 
@@ -8296,6 +8320,7 @@ border:3px solid #333;
     display:grid;
 
     grid-template-columns:repeat(4,1fr);
+    align-items:stretch;
 
     gap:30px;
 
@@ -8313,9 +8338,13 @@ border:3px solid #333;
 
     border-radius:25px;
 
-    padding:40px 30px;
+    padding:34px 30px 36px;
 
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
 
     box-shadow:0 15px 35px rgba(0,0,0,.08);
 
@@ -8345,7 +8374,7 @@ border:3px solid #333;
 
     height:90px;
 
-    margin:0 auto 25px;
+    margin:0 auto 24px;
 
     border-radius:50%;
 
@@ -8392,6 +8421,8 @@ border:3px solid #333;
 .care-card h3{
 
     font-size:24px;
+    line-height:1.25;
+    min-height:1.25em;
 
     color:#333;
 
@@ -8413,7 +8444,11 @@ border:3px solid #333;
 
     font-size:16px;
 
-    line-height:1.8;
+    line-height:1.65;
+    max-width:29ch;
+    min-height:calc(1.65em * 4);
+    margin:0 auto;
+    text-wrap:pretty;
 
 }
 
@@ -8780,7 +8815,7 @@ border:3px solid #333;
 
     position:relative;
 
-    min-height:80vh;
+    min-height:calc(100svh - 90px);
 
     background:url("../images/customorder-banner.jpg") center center/cover no-repeat;
 
@@ -8793,6 +8828,7 @@ border:3px solid #333;
     text-align:center;
 
     overflow:hidden;
+    padding:clamp(90px, 10vh, 120px) 8%;
 
 }
 
@@ -10261,6 +10297,7 @@ border:3px solid #333;
     display:grid;
 
     grid-template-columns:repeat(6,1fr);
+    align-items:start;
 
     gap:25px;
 
@@ -10299,6 +10336,9 @@ border:3px solid #333;
     position:relative;
 
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
     z-index:2;
 
@@ -10389,10 +10429,12 @@ border:3px solid #333;
 .process-step h3{
 
     font-size:20px;
+    line-height:1.25;
+    min-height:1.25em;
 
     color:#333;
 
-    margin-bottom:12px;
+    margin-bottom:14px;
 
     transition:.3s;
 
@@ -10410,11 +10452,13 @@ border:3px solid #333;
 
     font-size:15px;
 
-    line-height:1.7;
+    line-height:1.65;
 
-    max-width:180px;
+    max-width:22ch;
+    min-height:calc(1.65em * 4);
 
     margin:auto;
+    text-wrap:pretty;
 
 }
 
@@ -11522,6 +11566,8 @@ border:3px solid #333;
 
 .order-banner .banner-buttons{
     align-items:center;
+    justify-content:flex-start;
+    width:fit-content;
 }
 
 /* Primary Button */
@@ -12970,7 +13016,8 @@ select{
 
     text-align:left;
 
-    max-width:600px;
+    width:max-content;
+    max-width:100%;
 
     margin:0 auto 35px;
 
@@ -12980,7 +13027,7 @@ select{
 
     display:flex;
 
-    align-items:flex-start;
+    align-items:center;
 
     gap:12px;
 
@@ -12996,7 +13043,8 @@ select{
 
 .terms-box input{
 
-    margin-top:3px;
+    margin:0;
+    flex:0 0 auto;
 
     accent-color:#E91E63;
 
@@ -19196,7 +19244,7 @@ gap:25px;
 
 .care-card{
 
-padding:35px 25px;
+padding:32px 24px 34px;
 
 }
 
@@ -19242,7 +19290,7 @@ gap:25px;
 
 .care-card{
 
-padding:35px 25px;
+padding:32px 24px 34px;
 
 }
 
@@ -19271,6 +19319,7 @@ font-size:20px;
 font-size:15px;
 
 line-height:1.7;
+min-height:calc(1.7em * 4);
 
 }
 
@@ -19662,9 +19711,9 @@ right:-80px;
 
 .custom-banner{
 
-min-height:70vh;
+min-height:calc(100svh - 80px);
 
-padding:100px 6%;
+padding:90px 6%;
 
 }
 
@@ -19702,9 +19751,9 @@ gap:18px;
 
 .custom-banner{
 
-min-height:65vh;
+min-height:calc(100svh - 80px);
 
-padding:90px 5%;
+padding:80px 5%;
 
 }
 
@@ -19770,9 +19819,9 @@ padding:12px 20px;
 
 .custom-banner{
 
-min-height:60vh;
+min-height:auto;
 
-padding:80px 5%;
+padding:70px 5%;
 
 }
 
@@ -19864,9 +19913,9 @@ font-size:15px;
 
 .custom-banner{
 
-min-height:55vh;
+min-height:auto;
 
-padding:70px 20px;
+padding:62px 20px;
 
 }
 
@@ -21066,6 +21115,7 @@ background:#F7C9DA;
 .process-step{
 
 text-align:left;
+align-items:flex-start;
 
 padding-left:70px;
 
@@ -21114,6 +21164,7 @@ max-width:100%;
 font-size:14px;
 
 margin:0;
+min-height:auto;
 
 }
 
@@ -22619,6 +22670,8 @@ justify-content:center;
 .order-banner .banner-buttons{
 align-items:center;
 gap:16px;
+justify-content:center;
+width:100%;
 }
 
 }
@@ -22691,6 +22744,7 @@ gap:15px;
 
 .order-banner .banner-buttons{
 width:100%;
+justify-content:center;
 }
 
 .shop-btn,
@@ -23894,7 +23948,8 @@ padding:14px;
 
 .terms-box{
 
-max-width:100%;
+width:100%;
+max-width:360px;
 
 }
 
@@ -23903,6 +23958,7 @@ max-width:100%;
 font-size:14px;
 
 gap:10px;
+justify-content:flex-start;
 
 }
 
@@ -25642,6 +25698,10 @@ body.dark-mode .testimonial .customer{
         position:sticky;
     }
 
+    .hero{
+        min-height:calc(100svh - 80px);
+    }
+
     .logo{
         flex:1;
     }
@@ -25777,6 +25837,10 @@ body.dark-mode .testimonial .customer{
         min-height:74px;
     }
 
+    .hero{
+        min-height:auto;
+    }
+
     .logo img{
         height:52px;
     }
@@ -25802,8 +25866,12 @@ body.dark-mode .testimonial .customer{
 .process-card h3,
 .artist-content h3,
 .occasion-category .occasion-content h3,
-.care-card h3,
 .process-step h3{
+    line-height:1.25;
+    min-height:2.5em;
+}
+
+.care-card h3{
     line-height:1.25;
     min-height:1.25em;
 }
@@ -25817,13 +25885,26 @@ body.dark-mode .testimonial .customer{
     line-height:1.7;
 }
 
-.process-card p,
+.process-card p{
+    min-height:130px;
+}
+
 .care-card p{
-    min-height:102px;
+    line-height:1.65;
+    min-height:calc(1.65em * 4);
 }
 
 .artist-content p{
-    min-height:62px;
+    min-height:88px;
+}
+
+.artist-content span{
+    line-height:1.35;
+    min-height:2.7em;
+}
+
+.artist-content h3{
+    min-height:1.25em;
 }
 
 .occasion-category .occasion-content p{
@@ -25838,7 +25919,25 @@ body.dark-mode .testimonial .customer{
     min-height:152px;
 }
 
+.our-process .process-step h3{
+    line-height:1.25;
+    min-height:1.25em;
+    margin-bottom:14px;
+}
+
+.our-process .process-step p{
+    line-height:1.65;
+    max-width:22ch;
+    min-height:calc(1.65em * 4);
+    margin:0 auto;
+    text-wrap:pretty;
+}
+
 @media(max-width:768px){
+    .process-card{
+        min-height:auto;
+    }
+
     .process-card p,
     .artist-content p,
     .occasion-category .occasion-content p,
@@ -26044,6 +26143,19 @@ footer,
 
     .footer-links{
         gap:14px;
+    }
+}
+
+@media(max-width:480px){
+    .order-banner .banner-buttons a{
+        width:min(100%, 260px);
+    }
+}
+
+@media(max-width:480px){
+    .custom-banner{
+        padding-top:62px;
+        padding-bottom:62px;
     }
 }
 
@@ -26309,20 +26421,22 @@ footer,
     flex-direction:column;
     padding:18px 16px 20px;
     text-align:center;
+    justify-content:flex-start;
 }
 
 .occasion-category .occasion-content h3{
     font-size:clamp(19px, 1.35vw, 23px);
     line-height:1.25;
-    margin-bottom:12px;
+    min-height:auto;
+    margin-bottom:14px;
     overflow-wrap:normal;
 }
 
 .occasion-category .occasion-content p{
     flex:0 0 auto;
     max-width:33ch;
-    min-height:calc(1.55em * 4);
-    margin:0 auto 16px;
+    min-height:calc(1.55em * 3);
+    margin:0 auto 18px;
     color:#555;
     font-size:14px;
     font-weight:500;
@@ -26334,7 +26448,7 @@ footer,
 }
 
 .occasion-category .occasion-rate{
-    margin-top:auto;
+    margin-top:0;
     margin-bottom:14px;
     font-size:19px;
 }
@@ -26358,7 +26472,7 @@ footer,
 
     .occasion-category .occasion-content p{
         max-width:34ch;
-        min-height:calc(1.6em * 4);
+        min-height:calc(1.6em * 3);
         font-size:15px;
         line-height:1.6;
     }
