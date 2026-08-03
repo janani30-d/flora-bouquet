@@ -1451,6 +1451,20 @@ transform:translateY(0);
     margin-bottom:20px;
 }
 
+.occasion:not(.occasion-category) .occasion-content{
+    padding:24px 20px 28px;
+}
+
+.occasion:not(.occasion-category) .occasion-content h3{
+    margin-bottom:12px;
+}
+
+.occasion:not(.occasion-category) .occasion-content p{
+    min-height:0;
+    margin-bottom:22px;
+    line-height:1.4;
+}
+
 /* Explore Button */
 
 .occasion-content a{
@@ -11323,7 +11337,10 @@ border:3px solid #333;
 
     position:relative;
 
-    padding:140px 8%;
+    padding:90px 8%;
+    min-height:520px;
+    display:flex;
+    align-items:center;
 
     background:url("../images/order-banner.jpg") center/cover no-repeat;
 
@@ -11351,6 +11368,7 @@ border:3px solid #333;
     position:relative;
 
     z-index:2;
+    width:100%;
 
 }
 
@@ -11446,7 +11464,7 @@ border:3px solid #333;
 
     gap:18px;
 
-    margin-bottom:45px;
+    margin-bottom:30px;
 
 }
 
@@ -11500,6 +11518,10 @@ border:3px solid #333;
 
     flex-wrap:wrap;
 
+}
+
+.order-banner .banner-buttons{
+    align-items:center;
 }
 
 /* Primary Button */
@@ -22502,7 +22524,8 @@ padding:14px;
 
 .order-banner{
 
-padding:120px 6%;
+padding:80px 6%;
+min-height:460px;
 
 }
 
@@ -22544,7 +22567,8 @@ padding:10px 18px;
 
 .order-banner{
 
-padding:100px 5%;
+padding:70px 5%;
+min-height:430px;
 
 background-position:center;
 
@@ -22592,6 +22616,11 @@ justify-content:center;
 
 }
 
+.order-banner .banner-buttons{
+align-items:center;
+gap:16px;
+}
+
 }
 
 /*========== Mobile ==========*/
@@ -22600,7 +22629,8 @@ justify-content:center;
 
 .order-banner{
 
-padding:90px 5%;
+padding:60px 5%;
+min-height:400px;
 
 }
 
@@ -22637,6 +22667,7 @@ flex-direction:column;
 align-items:center;
 
 gap:12px;
+margin-bottom:24px;
 
 }
 
@@ -22656,6 +22687,10 @@ align-items:center;
 
 gap:15px;
 
+}
+
+.order-banner .banner-buttons{
+width:100%;
 }
 
 .shop-btn,
@@ -22678,7 +22713,8 @@ padding:15px;
 
 .order-banner{
 
-padding:80px 20px;
+padding:54px 20px;
+min-height:380px;
 
 }
 
@@ -25635,7 +25671,7 @@ body.dark-mode .testimonial .customer{
 
     header nav{
         order:3;
-        margin-top:10px;
+        margin-top:0;
         z-index:1001;
     }
 
@@ -25646,6 +25682,13 @@ body.dark-mode .testimonial .customer{
         z-index:1001;
     }
 
+    header:not(.menu-open) .header-right{
+        padding-top:0;
+        padding-bottom:0;
+        border-width:0;
+        box-shadow:none;
+    }
+
     header.menu-open nav,
     header.menu-open .header-right{
         max-height:680px;
@@ -25653,6 +25696,10 @@ body.dark-mode .testimonial .customer{
         visibility:visible;
         pointer-events:auto;
         transform:translateY(0);
+    }
+
+    header.menu-open nav{
+        margin-top:10px;
     }
 
     header.menu-open .header-right{
@@ -25748,7 +25795,7 @@ body.dark-mode .testimonial .customer{
 
 .process-card h3,
 .artist-content h3,
-.occasion-content h3,
+.occasion-category .occasion-content h3,
 .care-card h3,
 .process-step h3{
     line-height:1.25;
@@ -25757,7 +25804,7 @@ body.dark-mode .testimonial .customer{
 
 .process-card p,
 .artist-content p,
-.occasion-content p,
+.occasion-category .occasion-content p,
 .care-card p,
 .process-step p,
 .custom-testimonials .testimonial-card p{
@@ -25773,7 +25820,7 @@ body.dark-mode .testimonial .customer{
     min-height:62px;
 }
 
-.occasion-content p{
+.occasion-category .occasion-content p{
     min-height:136px;
 }
 
@@ -25788,7 +25835,7 @@ body.dark-mode .testimonial .customer{
 @media(max-width:768px){
     .process-card p,
     .artist-content p,
-    .occasion-content p,
+    .occasion-category .occasion-content p,
     .care-card p,
     .process-step p,
     .custom-testimonials .testimonial-card p{
@@ -26057,5 +26104,168 @@ footer,
 
     .hero2 .offer-card{
         display:none;
+    }
+}
+
+/* Mobile section titles should wrap inside the viewport */
+@media(max-width:768px){
+    .section-title{
+        width:100%;
+        max-width:100%;
+        padding-left:20px;
+        padding-right:20px;
+        margin-left:auto;
+        margin-right:auto;
+        overflow:hidden;
+    }
+
+    .section-title > span,
+    .featured .section-title span{
+        display:block;
+        max-width:100%;
+        font-size:13px;
+        line-height:1.5;
+        letter-spacing:4px;
+        overflow-wrap:anywhere;
+    }
+
+    .section-title h2,
+    .featured .section-title h2{
+        max-width:100%;
+        font-size:clamp(30px,9vw,38px);
+        line-height:1.2;
+        overflow-wrap:normal;
+        word-break:normal;
+    }
+
+    .section-title h2 span,
+    .featured .section-title h2 span{
+        display:block;
+    }
+
+    .section-title p,
+    .featured .section-title p,
+    .testimonial .section-title p{
+        width:100%;
+        max-width:100%;
+        font-size:15px;
+        line-height:1.7;
+        padding:0;
+        overflow-wrap:normal;
+        word-break:normal;
+    }
+}
+
+@media(max-width:480px){
+    .section-title{
+        padding-left:16px;
+        padding-right:16px;
+    }
+
+    .section-title > span,
+    .featured .section-title span{
+        letter-spacing:3px;
+    }
+
+    .section-title h2,
+    .featured .section-title h2{
+        font-size:30px;
+    }
+}
+
+/* Keep circular image badges from covering mobile imagery */
+@media(max-width:768px){
+    .experience{
+        right:12px;
+        bottom:12px;
+        width:104px;
+        height:104px;
+        border-radius:50%;
+    }
+
+    .experience h2{
+        font-size:28px;
+        line-height:1;
+    }
+
+    .experience p{
+        width:76px;
+        font-size:12px;
+        line-height:1.25;
+    }
+
+    .discount{
+        top:12px;
+        right:12px;
+        width:88px;
+        height:88px;
+    }
+
+    .discount h3{
+        font-size:25px;
+    }
+
+    .discount span{
+        font-size:14px;
+    }
+
+    .discount p{
+        max-width:64px;
+        margin-top:2px;
+        font-size:11px;
+        line-height:1.2;
+        text-align:center;
+    }
+
+    .story-circle{
+        width:118px;
+        height:118px;
+        margin:-48px auto 10px;
+        border-width:8px;
+    }
+
+    .story-circle h2{
+        font-size:32px;
+        margin-bottom:4px;
+    }
+
+    .story-circle span{
+        width:82px;
+        font-size:11px;
+        line-height:1.25;
+    }
+}
+
+@media(max-width:480px){
+    .experience{
+        width:92px;
+        height:92px;
+    }
+
+    .experience h2{
+        font-size:24px;
+    }
+
+    .experience p{
+        width:68px;
+        font-size:11px;
+    }
+
+    .discount{
+        width:78px;
+        height:78px;
+    }
+
+    .discount h3{
+        font-size:22px;
+    }
+
+    .discount span{
+        font-size:13px;
+    }
+
+    .discount p{
+        max-width:56px;
+        font-size:10px;
     }
 }
