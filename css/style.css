@@ -31,6 +31,7 @@ padding:0 7%;
 display:flex;
 align-items:center;
 justify-content:space-between;
+gap:28px;
 
 background:white;
 
@@ -46,18 +47,26 @@ z-index:1000;
 .logo img{
 
 height:65px;
+display:block;
 
 }
 
 .logo{
 cursor:pointer;
+flex:0 0 auto;
+}
+
+nav{
+flex:1 1 auto;
+min-width:0;
 }
 
 nav ul{
 
 display:flex;
 align-items:center;
-gap:35px;
+justify-content:center;
+gap:clamp(16px,2vw,35px);
 
 list-style:none;
 
@@ -73,11 +82,12 @@ nav ul li a{
 
 text-decoration:none;
 
-font-size:17px;
+font-size:clamp(14px,1.1vw,17px);
 
 font-weight:500;
 
 color:var(--text);
+white-space:nowrap;
 
 transition:.3s;
 
@@ -156,6 +166,7 @@ display:flex;
 align-items:center;
 
 gap:18px;
+flex:0 0 auto;
 
 }
 
@@ -873,6 +884,7 @@ outline-offset:4px;
     width:42px;
     height:42px;
     background:#fff;
+    border:2px solid transparent;
     border-radius:50%;
     display:flex;
     justify-content:center;
@@ -880,11 +892,13 @@ outline-offset:4px;
     cursor:pointer;
     box-shadow:0 5px 15px rgba(0,0,0,.1);
     z-index:9999;
+    transition:.3s;
     
 }
 
 .wishlist i{
     color:#E91E63;
+    transition:.3s;
 }
 
 /* Badge */
@@ -4068,8 +4082,8 @@ transform:translateY(0);
 .studio-gallery{
 
     display:grid;
-    grid-template-columns:2fr 1fr;
-    grid-auto-rows:260px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-auto-rows:320px;
     gap:25px;
     margin-top:60px;
 
@@ -4088,7 +4102,7 @@ transform:translateY(0);
 
 .gallery-item.large{
 
-    grid-row:span 2;
+    grid-row:span 1;
 
 }
 
@@ -6820,7 +6834,8 @@ transform:translateY(0);
 
     background:#fff;
 
-    border:1px solid #ddd;
+    border-color:#b8b8b8;
+    box-shadow:inset 0 0 0 2px #fff, 0 2px 8px rgba(0,0,0,.12);
 
 }
 
@@ -6956,6 +6971,12 @@ transform:translateY(0);
 .wishlist.active{
 
 background:#E91E63;
+
+border-color:#E91E63;
+
+}
+
+.wishlist.active i{
 
 color:#fff;
 
@@ -15836,6 +15857,9 @@ justify-content:center;
 .consultation-image{
 
 margin-top:20px;
+flex-direction:column;
+width:100%;
+overflow:hidden;
 
 }
 
@@ -15921,6 +15945,7 @@ text-align:center;
 .consultation-image img{
 
 max-width:320px;
+width:100%;
 
 }
 
@@ -23330,6 +23355,42 @@ height:110px;
 }
 
 }
+
+/* Compact Order Now form fields */
+
+.checkout-form .input-box label{
+    margin-bottom:6px;
+}
+
+.checkout-form .input-box input,
+.checkout-form .input-box select,
+.checkout-form .input-box textarea{
+    padding:9px 12px;
+    min-height:42px;
+    font-size:14px;
+    border-radius:10px;
+}
+
+.checkout-form .input-box textarea{
+    height:92px;
+    min-height:92px;
+}
+
+@media (max-width:768px){
+
+.checkout-form .input-box input,
+.checkout-form .input-box select,
+.checkout-form .input-box textarea{
+    padding:8px 11px;
+    min-height:40px;
+}
+
+.checkout-form .input-box textarea{
+    height:84px;
+    min-height:84px;
+}
+
+}
 /*=========================================
         PAYMENT RESPONSIVE
 =========================================*/
@@ -25362,6 +25423,145 @@ body.dark-mode .occasion-cta .cta-content p{
 }
 
 /*=========================================
+        HOME 1 TESTIMONIAL POLISH
+=========================================*/
+
+.testimonial{
+    background:
+        radial-gradient(circle at 12% 12%, rgba(233,30,99,.12), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(76,175,80,.10), transparent 30%),
+        #fff8f8;
+}
+
+.testimonial .section-title p{
+    max-width:620px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.testimonial-container{
+    gap:24px;
+}
+
+.testimonial-slider{
+    width:min(820px, 100%);
+}
+
+.testimonial .testimonial-card{
+    position:relative;
+    padding:48px 52px;
+    border:1px solid rgba(233,30,99,.12);
+    border-radius:18px;
+    box-shadow:0 22px 55px rgba(55,35,45,.12);
+    overflow:hidden;
+}
+
+.testimonial .testimonial-card::before{
+    content:"";
+    position:absolute;
+    inset:0 0 auto;
+    height:6px;
+    background:linear-gradient(90deg, #E91E63, #FFD54F, #4CAF50);
+}
+
+.testimonial .quote{
+    width:64px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:22px;
+    border-radius:50%;
+    background:#FFE4EF;
+    color:#E91E63;
+    font-size:28px;
+}
+
+.testimonial .stars{
+    display:inline-flex;
+    gap:6px;
+    padding:8px 14px;
+    margin-bottom:24px;
+    border-radius:999px;
+    background:#fff8df;
+}
+
+.testimonial .stars i{
+    margin:0;
+    color:#FFC107;
+}
+
+.testimonial .review{
+    color:#4f4f55;
+    font-size:18px;
+    line-height:1.85;
+    margin-bottom:34px;
+}
+
+.testimonial .customer{
+    padding-top:24px;
+    border-top:1px solid rgba(233,30,99,.12);
+}
+
+.testimonial .customer img{
+    width:76px;
+    height:76px;
+    border:4px solid #fff;
+    box-shadow:0 0 0 3px #E91E63, 0 12px 24px rgba(0,0,0,.12);
+}
+
+.testimonial .customer h4{
+    font-size:21px;
+    margin-bottom:4px;
+}
+
+.testimonial .customer span{
+    color:#777;
+    font-weight:500;
+}
+
+.testimonial .testimonial-btn{
+    border:1px solid rgba(233,30,99,.16);
+    box-shadow:0 14px 30px rgba(55,35,45,.12);
+}
+
+.testimonial .testimonial-dots .dot{
+    width:28px;
+    height:8px;
+    border-radius:999px;
+    background:#f3c2d4;
+}
+
+.testimonial .testimonial-dots .dot.active{
+    width:42px;
+    background:#E91E63;
+    transform:none;
+}
+
+body.dark-mode .testimonial{
+    background:
+        radial-gradient(circle at 12% 12%, rgba(233,30,99,.16), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(76,175,80,.14), transparent 30%),
+        #11151b;
+}
+
+body.dark-mode .testimonial .quote{
+    background:#3a1f2b;
+}
+
+body.dark-mode .testimonial .stars{
+    background:#3a3322;
+}
+
+body.dark-mode .testimonial .review{
+    color:#d7dbe3;
+}
+
+body.dark-mode .testimonial .customer{
+    border-top-color:#303641;
+}
+
+/*=========================================
         HOME 1 FEATURED IMAGE SIZE
 =========================================*/
 
@@ -25397,7 +25597,7 @@ body.dark-mode .occasion-cta .cta-content p{
         MOBILE AND TABLET MENU
 =========================================*/
 
-@media(max-width:992px){
+@media(max-width:1200px){
     header{
         height:auto;
         min-height:80px;
@@ -25541,5 +25741,321 @@ body.dark-mode .occasion-cta .cta-content p{
     .login-btn{
         width:100%;
         justify-content:center;
+    }
+}
+
+/* Equal card text lines */
+
+.process-card h3,
+.artist-content h3,
+.occasion-content h3,
+.care-card h3,
+.process-step h3{
+    line-height:1.25;
+    min-height:1.25em;
+}
+
+.process-card p,
+.artist-content p,
+.occasion-content p,
+.care-card p,
+.process-step p,
+.custom-testimonials .testimonial-card p{
+    line-height:1.7;
+}
+
+.process-card p,
+.care-card p{
+    min-height:102px;
+}
+
+.artist-content p{
+    min-height:62px;
+}
+
+.occasion-content p{
+    min-height:136px;
+}
+
+.process-step p{
+    min-height:102px;
+}
+
+.custom-testimonials .testimonial-card p{
+    min-height:152px;
+}
+
+@media(max-width:768px){
+    .process-card p,
+    .artist-content p,
+    .occasion-content p,
+    .care-card p,
+    .process-step p,
+    .custom-testimonials .testimonial-card p{
+        min-height:auto;
+    }
+}
+
+/*=========================================
+        SITEWIDE RESPONSIVE STABILITY
+=========================================*/
+
+html,
+body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+img,
+video{
+    max-width:100%;
+}
+
+section,
+header,
+footer,
+.container,
+.footer-container,
+.hero-content,
+.hero2-content,
+.banner-content,
+.custom-banner-content,
+.order-banner-content,
+.contact-hero-content,
+.footer-col,
+.product-card,
+.category-card,
+.occasion-card,
+.season-card,
+.service-card,
+.pricing-card,
+.custom-feature-card,
+.testimonial-card,
+.checkout-card,
+.payment-box,
+.place-order-card,
+.login-container,
+.register-container,
+.login-content,
+.register-content,
+.login-form,
+.register-form{
+    min-width:0;
+}
+
+.hero-content h1,
+.hero2-content h1,
+.banner-content h1,
+.occasion-content h1,
+.custom-banner-content h1,
+.order-banner-content h1,
+.contact-hero-content h1,
+.section-title h2,
+.footer-col h3,
+.footer-col p,
+.footer-col a,
+.contact-info li{
+    overflow-wrap:anywhere;
+}
+
+.hero-btn,
+.hero-buttons,
+.banner-buttons,
+.contact-hero-actions,
+.footer-links,
+.newsletter-form,
+.newsletter-input{
+    min-width:0;
+}
+
+.hero-btn a,
+.hero-buttons a,
+.banner-buttons a,
+.contact-hero-actions a,
+.primary-btn,
+.secondary-btn,
+.btn-primary,
+.btn-outline{
+    max-width:100%;
+}
+
+.newsletter-input input,
+.search-box input,
+.shop-toolbar input,
+.shop-toolbar select,
+.shop-sort select,
+.custom-form input,
+.custom-form select,
+.custom-form textarea,
+.contact-field input,
+.contact-field select,
+.contact-field textarea,
+.input-box input,
+.input-box select,
+.register-group input{
+    min-width:0;
+}
+
+.login-container,
+.register-container{
+    max-width:100%;
+}
+
+@media(max-width:1200px){
+    .hero,
+    .hero2,
+    .about-banner,
+    .bouquet-banner,
+    .occasion-banner,
+    .custom-banner,
+    .order-banner,
+    .contact-hero{
+        height:auto;
+    }
+
+    header{
+        gap:12px;
+    }
+}
+
+@media(max-width:768px){
+    .hero,
+    .hero2,
+    .about-banner,
+    .bouquet-banner,
+    .occasion-banner,
+    .custom-banner,
+    .order-banner,
+    .contact-hero{
+        min-height:auto;
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .about-banner,
+    .bouquet-banner,
+    .occasion-banner,
+    .custom-banner,
+    .order-banner,
+    .contact-hero{
+        padding-top:70px;
+        padding-bottom:70px;
+    }
+
+    .hero-content,
+    .hero-image,
+    .hero2-content,
+    .hero2-image,
+    .banner-content,
+    .custom-banner-content,
+    .order-banner-content,
+    .contact-hero-content{
+        width:100%;
+        max-width:100%;
+    }
+
+    .hero-btn,
+    .hero-buttons,
+    .banner-buttons,
+    .contact-hero-actions{
+        justify-content:center;
+    }
+
+    .footer-col,
+    .footer-bottom{
+        width:100%;
+    }
+}
+
+@media(max-width:480px){
+    .hero,
+    .hero2,
+    .about-banner,
+    .bouquet-banner,
+    .occasion-banner,
+    .custom-banner,
+    .order-banner,
+    .contact-hero{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .hero-btn a,
+    .hero-buttons a,
+    .banner-buttons a,
+    .contact-hero-actions a{
+        width:100%;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .footer-links{
+        gap:14px;
+    }
+}
+
+/* Mobile fix for the home page slider hero */
+@media(max-width:992px){
+    .hero{
+        min-height:auto;
+        padding:40px 0 70px;
+        margin-top:0;
+    }
+
+    .hero .slides{
+        height:auto;
+    }
+
+    .hero .slide{
+        position:relative;
+        inset:auto;
+        display:none;
+        min-height:auto;
+        padding:45px 6% 55px;
+    }
+
+    .hero .slide.active{
+        display:flex;
+    }
+
+    .hero .hero-image{
+        padding-top:0;
+        align-items:center;
+    }
+
+    .hero .hero-image img{
+        max-height:none;
+        margin-bottom:24px;
+    }
+
+    .hero .dots{
+        bottom:24px;
+    }
+}
+
+@media(max-width:576px){
+    .hero .slide{
+        padding:36px 20px 58px;
+    }
+
+    .hero .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero .hero-image img{
+        max-width:280px;
+    }
+}
+
+/* Keep the home2 hero text clear on mobile */
+@media(max-width:768px){
+    .hero2 .hero-tag{
+        max-width:100%;
+        line-height:1.6;
+        white-space:normal;
+    }
+
+    .hero2 .offer-card{
+        display:none;
     }
 }

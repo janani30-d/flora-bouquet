@@ -164,7 +164,7 @@ if (siteHeader && siteNav) {
     });
 
     window.addEventListener("resize", function() {
-        if (window.innerWidth > 992) {
+        if (window.innerWidth > 1200) {
             closeMobileMenu();
         }
     });
@@ -364,22 +364,6 @@ filterButtons.forEach(button => {
         });
 
     });
-
-});
-
-
-document.querySelectorAll(".wishlist").forEach(item=>{
-
-item.addEventListener("click",function(){
-
-const icon=this.querySelector("i");
-
-icon.classList.toggle("fa-regular");
-icon.classList.toggle("fa-solid");
-
-icon.style.color="#E91E63";
-
-});
 
 });
 
