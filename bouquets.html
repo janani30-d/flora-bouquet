@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flora Bouquet</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="images/logo.png" alt="Logo">
+
+</div>
+
+
+<nav>
+
+<ul>
+
+<li class="dropdown">
+
+<a href="#">Home <i class="fa-solid fa-angle-down"></i></a>
+
+<ul class="dropdown-menu">
+
+<li><a href="index.html">Home 1</a></li>
+
+<li><a href="home2.html">Home 2</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="bouquets.html">Bouquets</a></li>
+
+<li><a href="occasions.html">Occasions</a></li>
+
+<li><a href="custom-orders.html">Custom Orders</a></li>
+
+<li><a href="order.html">Order Now</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+<div class="header-right">
+
+<button id="theme-btn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+<button id="rtl-btn">
+
+<i class="fa-solid fa-right-left"></i>
+
+</button>
+
+<a href="login.html" class="login-btn">
+
+<i class="fa-regular fa-user"></i>
+
+Login
+
+</a>
+
+</div>
+
+</header>
+<!--=========================================
+            BOUQUETS BANNER
+==========================================-->
+
+<section class="bouquet-banner">
+
+    <div class="banner-overlay"></div>
+
+    <div class="banner-content">
+
+        <span class="banner-subtitle">
+
+            OUR COLLECTION
+
+        </span>
+
+        <h1>
+
+            Beautiful Bouquets <br>
+
+            For Every Occasion
+
+        </h1>
+
+        <p>
+
+            Discover handcrafted floral arrangements made with
+            fresh seasonal flowers, perfect for birthdays,
+            anniversaries, weddings, and every special moment.
+
+        </p>
+
+        <div class="breadcrumb">
+
+            <a href="index.html">Home</a>
+
+            <span>/</span>
+
+            <span>Bouquets</span>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=========================================
+            SHOP PAGE
+==========================================-->
+
+<section class="shop-page bouquet-shop">
+
+    <div class="container">
+
+        <div class="shop-layout">
+
+            <!--=================================
+                    SIDEBAR
+            ==================================-->
+
+            <aside class="shop-sidebar">
+
+                <!-- Search -->
+
+                <div class="sidebar-widget">
+
+                    <h3>Search</h3>
+
+                    <div class="search-box">
+
+                        <input type="text"
+                               placeholder="Search Bouquet...">
+
+                        <button>
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Categories -->
+
+                <div class="sidebar-widget">
+
+                    <h3>Categories</h3>
+
+                    <ul class="category-list">
+
+                        <li>
+                            <a href="#">
+                                Roses
+                                <span>(12)</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Lilies
+                                <span>(8)</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Tulips
+                                <span>(10)</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Orchids
+                                <span>(6)</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Sunflowers
+                                <span>(7)</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Mixed Bouquets
+                                <span>(15)</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Price -->
+
+                <div class="sidebar-widget">
+
+                    <h3>Price</h3>
+
+                    <input type="range"
+                           min="500"
+                           max="5000">
+
+                    <p>
+
+                        ₹500 - ₹5000
+
+                    </p>
+
+                </div>
+
+                <!-- Colors -->
+
+                <div class="sidebar-widget">
+
+                    <h3>Colors</h3>
+
+                    <div class="color-filter">
+
+                        <span class="red"></span>
+
+                        <span class="pink"></span>
+
+                        <span class="white"></span>
+
+                        <span class="yellow"></span>
+
+                        <span class="purple"></span>
+
+                        <span class="orange"></span>
+
+                    </div>
+
+                </div>
+
+                <!-- Bouquet Size -->
+
+                <div class="sidebar-widget">
+
+                    <h3>Bouquet Size</h3>
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Small
+
+                    </label>
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Medium
+
+                    </label>
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Large
+
+                    </label>
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Luxury
+
+                    </label>
+
+                </div>
+
+                <!-- Availability -->
+
+                <div class="sidebar-widget">
+
+                    <h3>Availability</h3>
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        In Stock
+
+                    </label>
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        New Arrival
+
+                    </label>
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        On Sale
+
+                    </label>
+
+                </div>
+
+            </aside>
+
+            <!--=================================
+                    SHOP CONTENT
+            ==================================-->
+
+            <div class="shop-content">
+                <!--=================================
+        SHOP TOOLBAR
+==================================-->
+
+<div class="shop-toolbar">
+
+    <div class="shop-result">
+
+        <p>Showing 1–9 of 48 Bouquets</p>
+
+    </div>
+
+    <div class="shop-sort">
+
+        <select>
+
+            <option>Default Sorting</option>
+
+            <option>Newest</option>
+
+            <option>Best Selling</option>
+
+            <option>Price: Low to High</option>
+
+            <option>Price: High to Low</option>
+
+        </select>
+
+    </div>
+
+</div>
+
+<!--=================================
+        PRODUCT GRID
+==================================-->
+
+<div class="product-grid">
+
+    <!--=========================
+            PRODUCT 1
+    ==========================-->
+
+    <div class="product-card">
+
+        <span class="sale">20% OFF</span>
+
+        <button class="wishlist">
+
+            <i class="fa-regular fa-heart"></i>
+
+        </button>
+
+        <img src="images/product-1.jpg" alt="Pink Romance Bouquet">
+
+        <span class="category">
+
+            ROSES
+
+        </span>
+
+        <h3>Pink Romance Bouquet</h3>
+
+        <div class="rating">
+
+            ★★★★★
+
+            <span>(4.9)</span>
+
+        </div>
+
+        <div class="price">
+
+            ₹1,499
+
+            <del>₹1,899</del>
+
+        </div>
+
+        <a href="#" class="product-btn">
+
+            Order Now
+
+        </a>
+
+    </div>
+
+    <!--=========================
+            PRODUCT 2
+    ==========================-->
+
+    <div class="product-card">
+
+        <button class="wishlist">
+
+            <i class="fa-regular fa-heart"></i>
+
+        </button>
+
+        <img src="images/product-2.jpg" alt="White Lily Elegance">
+
+        <span class="category">
+
+            LILIES
+
+        </span>
+
+        <h3>White Lily Elegance</h3>
+
+        <div class="rating">
+
+            ★★★★★
+
+            <span>(4.8)</span>
+
+        </div>
+
+        <div class="price">
+
+            ₹1,299
+
+        </div>
+
+        <a href="#" class="product-btn">
+
+            Order Now
+
+        </a>
+
+    </div>
+
+    <!--=========================
+            PRODUCT 3
+    ==========================-->
+
+    <div class="product-card">
+
+        <span class="sale">15% OFF</span>
+
+        <button class="wishlist">
+
+            <i class="fa-regular fa-heart"></i>
+
+        </button>
+
+        <img src="images/product-3.jpg" alt="Spring Blossom Basket">
+
+        <span class="category">
+
+            MIXED
+
+        </span>
+
+        <h3>Spring Blossom Basket</h3>
+
+        <div class="rating">
+
+            ★★★★★
+
+            <span>(5.0)</span>
+
+        </div>
+
+        <div class="price">
+
+            ₹2,199
+
+            <del>₹2,499</del>
+
+        </div>
+
+        <a href="#" class="product-btn">
+
+            Order Now
+
+        </a>
+
+    </div>
+    <!--=========================
+        PRODUCT 4
+==========================-->
+
+<div class="product-card">
+
+    <button class="wishlist">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
+
+    <img src="images/product-4.jpg" alt="Tulip Sunshine Bouquet">
+
+    <span class="category">
+
+        TULIPS
+
+    </span>
+
+    <h3>Tulip Sunshine Bouquet</h3>
+
+    <div class="rating">
+
+        ★★★★★
+
+        <span>(4.8)</span>
+
+    </div>
+
+    <div class="price">
+
+        ₹1,699
+
+    </div>
+
+    <a href="#" class="product-btn">
+
+        Order Now
+
+    </a>
+
+</div>
+
+<!--=========================
+        PRODUCT 5
+==========================-->
+
+<div class="product-card">
+
+    <span class="sale">10% OFF</span>
+
+    <button class="wishlist">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
+
+    <img src="images/product-5.jpg" alt="Golden Sunflower Charm">
+
+    <span class="category">
+
+        SUNFLOWERS
+
+    </span>
+
+    <h3>Golden Sunflower Charm</h3>
+
+    <div class="rating">
+
+        ★★★★★
+
+        <span>(4.9)</span>
+
+    </div>
+
+    <div class="price">
+
+        ₹1,399
+
+        <del>₹1,599</del>
+
+    </div>
+
+    <a href="#" class="product-btn">
+
+        Order Now
+
+    </a>
+
+</div>
+
+<!--=========================
+        PRODUCT 6
+==========================-->
+
+<div class="product-card">
+
+    <button class="wishlist">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
+
+    <img src="images/product-6.jpg" alt="Orchid Grace Arrangement">
+
+    <span class="category">
+
+        ORCHIDS
+
+    </span>
+
+    <h3>Orchid Grace Arrangement</h3>
+
+    <div class="rating">
+
+        ★★★★★
+
+        <span>(5.0)</span>
+
+    </div>
+
+    <div class="price">
+
+        ₹2,499
+
+    </div>
+
+    <a href="#" class="product-btn">
+
+        Order Now
+
+    </a>
+
+</div>
+<!--=================================
+        PRODUCT 7
+==================================-->
+
+<div class="product-card">
+
+    <span class="sale">25% OFF</span>
+
+    <button class="wishlist">
+        <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <img src="images/product-7.jpg" alt="Crimson Rose">
+
+    <span class="category">
+        ROSES
+    </span>
+
+    <h3>Crimson Rose Luxury</h3>
+
+    <div class="rating">
+        ★★★★★
+        <span>(4.9)</span>
+    </div>
+
+    <div class="price">
+        ₹1,999
+        <del>₹2,499</del>
+    </div>
+
+    <a href="#" class="product-btn">
+        Order Now
+    </a>
+
+</div>
+
+<!--=================================
+        PRODUCT 8
+==================================-->
+
+<div class="product-card">
+
+    <button class="wishlist">
+        <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <img src="images/product-8.jpg" alt="Pastel Garden">
+
+    <span class="category">
+        MIXED
+    </span>
+
+    <h3>Pastel Garden Bouquet</h3>
+
+    <div class="rating">
+        ★★★★★
+        <span>(4.8)</span>
+    </div>
+
+    <div class="price">
+        ₹1,799
+    </div>
+
+    <a href="#" class="product-btn">
+        Order Now
+    </a>
+
+</div>
+
+<!--=================================
+        PRODUCT 9
+==================================-->
+
+<div class="product-card">
+
+    <span class="sale">18% OFF</span>
+
+    <button class="wishlist">
+        <i class="fa-regular fa-heart"></i>
+    </button>
+
+    <img src="images/product-9.jpg" alt="Luxury Floral Gift Box">
+
+    <span class="category">
+        GIFT BOX
+    </span>
+
+    <h3>Luxury Floral Gift Box</h3>
+
+    <div class="rating">
+        ★★★★★
+        <span>(5.0)</span>
+    </div>
+
+    <div class="price">
+        ₹2,799
+        <del>₹3,199</del>
+    </div>
+
+    <a href="#" class="product-btn">
+        Order Now
+    </a>
+
+</div>
+
+</div>
+<!-- End Product Grid -->
+
+<!--=================================
+        PAGINATION
+==================================-->
+
+<div class="pagination">
+
+    <a href="#">
+        <i class="fa-solid fa-angle-left"></i>
+    </a>
+
+    <a href="#" class="active">
+        1
+    </a>
+
+    <a href="#">
+        2
+    </a>
+
+    <a href="#">
+        3
+    </a>
+
+    <a href="#">
+        <i class="fa-solid fa-angle-right"></i>
+    </a>
+
+</div>
+
+</div>
+<!-- End Shop Content -->
+
+</div>
+<!-- End Shop Layout -->
+
+</div>
+<!-- End Container -->
+
+</section>
+<!--=========================================
+            NEWSLETTER SECTION
+==========================================-->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <div class="newsletter-wrapper">
+
+            <!-- Left Content -->
+
+            <div class="newsletter-content">
+
+                <span class="section-tag">
+
+                    JOIN OUR NEWSLETTER
+
+                </span>
+
+                <h2>
+
+                    Stay Updated With Our
+                    <span>Latest Bouquets</span>
+
+                </h2>
+
+                <p>
+
+                    Subscribe to receive exclusive offers, seasonal flower
+                    collections, bouquet care tips, and exciting discounts
+                    delivered directly to your inbox.
+
+                </p>
+
+            </div>
+
+            <!-- Newsletter Form -->
+
+            <form class="newsletter-form">
+
+                <div class="newsletter-input">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+
+                    Subscribe Now
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--=========================================
+                FOOTER
+==========================================-->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Column 1 -->
+
+        <div class="footer-col">
+
+            <div class="footer-logo">
+
+                <img src="images/logo.png" alt="Flora Bouquet">
+
+            </div>
+
+            <p>
+                Bringing happiness through beautiful flowers,
+                handcrafted bouquets, and memorable moments.
+                Fresh flowers delivered with love.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- Column 2 -->
+
+        <div class="footer-col">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">Home 2</a></li>
+
+                <li><a href="#">About Us</a></li>
+
+                <li><a href="#">Shop</a></li>
+
+                <li><a href="#">Classes</a></li>
+
+                <li><a href="#">Blog</a></li>
+
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Column 3 -->
+
+        <div class="footer-col">
+
+            <h3>Flower Categories</h3>
+
+            <ul>
+
+                <li><a href="#">Roses</a></li>
+
+                <li><a href="#">Tulips</a></li>
+
+                <li><a href="#">Lilies</a></li>
+
+                <li><a href="#">Orchids</a></li>
+
+                <li><a href="#">Sunflowers</a></li>
+
+                <li><a href="#">Mixed Bouquets</a></li>
+
+                <li><a href="#">Gift Boxes</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Column 4 -->
+
+        <div class="footer-col">
+
+            <h3>Contact Us</h3>
+
+            <ul class="contact-info">
+
+                <li>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Madurai, Tamil Nadu, India
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 98765 43210
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    hello@florabouquet.com
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    Mon - Sat : 9:00 AM - 8:00 PM
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2026 Flora Bouquet. All Rights Reserved.
+
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Sitemap</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="jss/script.js"></script>
+
+</body>
+
+</html>

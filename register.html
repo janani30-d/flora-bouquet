@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register - Flora Bouquet</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<button id="theme-btn" class="auth-theme-btn" aria-label="Toggle dark mode">
+
+    <i class="fa-solid fa-moon"></i>
+
+</button>
+
+<button id="rtl-btn" class="auth-rtl-btn" aria-label="Toggle RTL mode">
+
+    <i class="fa-solid fa-right-left"></i>
+
+</button>
+
+
+
+<!--=========================================
+            REGISTER SECTION
+==========================================-->
+
+<section class="register-section">
+
+    <div class="register-container">
+
+        <!--=========================
+            LEFT IMAGE
+        ==========================-->
+
+        <div class="register-image">
+
+            <img src="images/register.jpg"
+                 alt="Flora Bouquet Register">
+
+        </div>
+
+        <!--=========================
+            RIGHT CONTENT
+        ==========================-->
+
+        <div class="register-content">
+
+            <!-- Logo -->
+
+            <a class="register-logo" href="index.html" aria-label="Go to home page">
+
+                <img src="images/logo.png"
+                     alt="Flora Bouquet">
+
+            </a>
+
+            <h2>Create Account</h2>
+
+            <p>
+
+                Join Flora Bouquet and enjoy a beautiful floral shopping experience.
+
+            </p>
+
+            <!--=========================
+                REGISTER FORM
+            ==========================-->
+
+            <form class="register-form" action="#">
+
+                <!-- First Name -->
+
+                <div class="register-group">
+
+                    <input type="text"
+                           placeholder="First Name"
+                           required>
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <!-- Last Name -->
+
+                <div class="register-group">
+
+                    <input type="text"
+                           placeholder="Last Name"
+                           required>
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="register-group">
+
+                    <input type="email"
+                           placeholder="Email Address"
+                           required>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+                <!-- Phone -->
+
+                <div class="register-group">
+
+                    <input type="tel"
+                           placeholder="Phone Number"
+                           required>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </div>
+
+                <!-- Password -->
+
+                <div class="register-group register-password">
+
+                    <input type="password"
+                           id="registerPassword"
+                           placeholder="Password"
+                           required>
+
+                    <i class="fa-solid fa-eye toggle-register-password"></i>
+
+                </div>
+
+                <!-- Confirm Password -->
+
+                <div class="register-group register-password">
+
+                    <input type="password"
+                           id="confirmPassword"
+                           placeholder="Confirm Password"
+                           required>
+
+                    <i class="fa-solid fa-eye toggle-confirm-password"></i>
+
+                </div>
+
+                <!-- Terms -->
+
+                <div class="register-options">
+
+                    <label>
+
+                        <input type="checkbox"
+                               required>
+
+                        I agree to the
+
+                        <a href="#">
+
+                            Terms & Conditions
+
+                        </a>
+
+                    </label>
+
+                </div>
+
+                <!-- Button -->
+
+                <button type="submit"
+                        class="register-btn">
+
+                    Create Account
+
+                </button>
+
+            </form>
+
+            <!-- Divider -->
+
+            <div class="register-divider">
+
+                <span>Or Sign Up With</span>
+
+            </div>
+
+            <!-- Social Login -->
+
+            <div class="register-social">
+
+                <a href="#">
+
+                    <i class="fab fa-google"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-apple"></i>
+
+                </a>
+
+            </div>
+
+            <!-- Login Link -->
+
+            <div class="register-login-link">
+
+                <p>
+
+                    Already have an account?
+
+                    <a href="login.html">
+
+                        Login
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="jss/script.js"></script>
+
+</body>
+
+</html>
