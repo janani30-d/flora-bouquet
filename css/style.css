@@ -14246,7 +14246,7 @@ justify-content:center;
 
 }
 
-@media(max-width:991px){
+@media(max-width:1200px){
 
 .category-grid{
 
@@ -27332,5 +27332,167 @@ body.dark-mode .hero-image img{
         width:min(100%, 300px);
         justify-content:start;
         padding:14px 22px;
+    }
+}
+
+/* Keep Our Artists card images fully visible on mobile, tablet, iPad mini, and iPad Pro */
+@media (max-width:991px), (max-width:1366px) and (pointer:coarse){
+    .artist-card .artist-image{
+        background:#fff7fb;
+    }
+
+    .artist-card .artist-image img{
+        object-fit:contain !important;
+        object-position:center center !important;
+        background:#fff7fb;
+    }
+
+    .artist-card:hover .artist-image img{
+        transform:none !important;
+    }
+}
+
+/* Home 2 iPad readability */
+@media (max-width:1366px) and (pointer:coarse){
+    .hero2::before,
+    .hero2::after{
+        z-index:0;
+        pointer-events:none;
+    }
+
+    .hero2 .hero-slider,
+    .hero2 .hero2-container{
+        position:relative;
+        z-index:2;
+    }
+
+    .hero2 .hero-slide{
+        animation:none !important;
+    }
+
+    .hero2 .hero-slide.active{
+        opacity:1 !important;
+        visibility:visible !important;
+    }
+
+    .hero2-image::before{
+        background:rgba(255,248,248,.52) !important;
+    }
+
+    .hero2-content{
+        position:relative;
+        z-index:4;
+    }
+
+    .hero2-content h1,
+    .hero2-content h1 span{
+        color:#2f2f34;
+        text-shadow:0 2px 12px rgba(255,255,255,.74);
+    }
+
+    .hero2-content p,
+    .hero-features span{
+        color:#3f3f45 !important;
+    }
+
+    .hero2 .hero-tag{
+        background:#fff;
+        color:#E91E63;
+    }
+}
+
+/* iPad Pro portrait hero balance */
+@media (min-width:992px) and (max-width:1100px) and (min-height:1200px){
+    .hero{
+        min-height:820px;
+    }
+
+    .hero .slides{
+        min-height:820px;
+    }
+
+    .hero .slide{
+        align-items:flex-start;
+        min-height:820px;
+        padding-top:120px;
+        padding-bottom:120px;
+    }
+
+    .hero-image{
+        padding-top:34px;
+    }
+
+    .hero-image img{
+        max-width:460px;
+    }
+
+    .hero2{
+        align-items:flex-start;
+        padding-top:clamp(150px, 14svh, 190px);
+        padding-bottom:70px;
+    }
+
+    .hero2-container{
+        min-height:620px;
+    }
+
+    .why-container,
+    .story-container{
+        grid-template-columns:1fr;
+        gap:54px;
+    }
+
+    .why-image{
+        max-width:560px;
+        margin:0 auto;
+    }
+
+    .why-content{
+        width:100%;
+        max-width:650px;
+        margin:0 auto;
+    }
+
+    .experience{
+        right:18px;
+    }
+
+    .story-gallery{
+        width:100%;
+        max-width:620px;
+        height:620px;
+        margin:0 auto;
+    }
+
+    .story-img-1{
+        width:220px;
+        height:240px;
+    }
+
+    .story-img-2{
+        width:380px;
+        height:450px;
+        left:120px;
+    }
+
+    .story-img-3{
+        width:220px;
+        height:180px;
+    }
+
+    .story-circle{
+        left:25px;
+        top:210px;
+    }
+
+    .story-content{
+        max-width:720px;
+        margin:0 auto;
+        text-align:center;
+    }
+
+    .story-content p{
+        margin-left:auto;
+        margin-right:auto;
     }
 }
