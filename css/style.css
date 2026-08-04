@@ -25491,7 +25491,7 @@ body.dark-mode .map-box{
 
 .auth-theme-btn,
 .auth-rtl-btn{
-    position:fixed;
+    position:absolute;
     top:24px;
     right:24px;
     width:48px;
@@ -25531,6 +25531,11 @@ body.dark-mode .auth-rtl-btn.active{
     background:#E91E63;
     color:#fff;
     border-color:#E91E63;
+}
+
+body:has(.auth-theme-btn),
+body:has(.auth-rtl-btn){
+    position:relative;
 }
 
 /*=========================================
@@ -25590,14 +25595,8 @@ html[dir="rtl"] .auth-rtl-btn{
 }
 
 @media(max-width:768px){
-    body:has(.auth-theme-btn),
-    body:has(.auth-rtl-btn){
-        position:relative;
-    }
-
     .auth-theme-btn,
     .auth-rtl-btn{
-        position:absolute;
         top:14px;
         width:42px;
         height:42px;
