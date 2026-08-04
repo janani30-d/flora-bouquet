@@ -23566,36 +23566,46 @@ height:110px;
 
 /* Compact Order Now form fields */
 
+.checkout-form .input-box{
+    padding:10px 26px 14px;
+    gap:8px;
+    border-radius:32px;
+}
+
 .checkout-form .input-box label{
-    margin-bottom:6px;
+    margin-bottom:0;
 }
 
 .checkout-form .input-box input,
 .checkout-form .input-box select,
 .checkout-form .input-box textarea{
-    padding:9px 12px;
-    min-height:42px;
+    padding:12px 16px;
+    min-height:48px;
     font-size:14px;
     border-radius:10px;
 }
 
 .checkout-form .input-box textarea{
-    height:92px;
-    min-height:92px;
+    height:112px;
+    min-height:112px;
 }
 
 @media (max-width:768px){
 
+.checkout-form .input-box{
+    padding:10px 18px 13px;
+}
+
 .checkout-form .input-box input,
 .checkout-form .input-box select,
 .checkout-form .input-box textarea{
-    padding:8px 11px;
-    min-height:40px;
+    padding:11px 14px;
+    min-height:46px;
 }
 
 .checkout-form .input-box textarea{
-    height:84px;
-    min-height:84px;
+    height:104px;
+    min-height:104px;
 }
 
 }
@@ -26181,9 +26191,72 @@ footer,
     min-width:0;
 }
 
+.newsletter-input{
+    gap:12px;
+    align-items:center;
+    padding:8px 24px;
+    border:2px solid #f3d9e5;
+    border-radius:999px;
+}
+
+.newsletter-input i{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:22px;
+    height:22px;
+    margin-right:0;
+    line-height:1;
+}
+
+.newsletter-input input{
+    min-height:46px;
+    padding:10px 0;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    background:transparent;
+}
+
+.newsletter-box .input-box{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:12px;
+    padding:10px 24px;
+    border:2px solid #f3d9e5;
+    border-radius:999px;
+}
+
+.newsletter-box .input-box i{
+    flex:0 0 auto;
+    margin:0;
+    line-height:1;
+}
+
+.newsletter-box .input-box input{
+    min-height:46px;
+    padding:10px 0;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    background:transparent;
+}
+
 .login-container,
 .register-container{
     max-width:100%;
+}
+
+@media(max-width:480px){
+    .newsletter-input{
+        padding:8px 18px;
+    }
+
+    .newsletter-box .input-box{
+        padding:8px 18px;
+    }
 }
 
 @media(max-width:1200px){
@@ -27148,5 +27221,36 @@ body.dark-mode .hero-image img{
     .banner-feature{
         width:100%;
         justify-content:center;
+    }
+}
+
+/* Keep occasion CTA feature icons aligned on mobile */
+.occasion-cta .cta-features{
+    align-items:center;
+}
+
+.occasion-cta .feature{
+    display:grid;
+    grid-template-columns:22px 1fr;
+    align-items:center;
+    justify-content:start;
+    column-gap:12px;
+    text-align:left;
+}
+
+.occasion-cta .feature i{
+    width:22px;
+    text-align:center;
+}
+
+.occasion-cta .feature span{
+    line-height:1.35;
+}
+
+@media(max-width:768px){
+    .occasion-cta .feature{
+        width:min(100%, 300px);
+        justify-content:start;
+        padding:14px 22px;
     }
 }
