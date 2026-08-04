@@ -23566,6 +23566,10 @@ height:110px;
 
 /* Compact Order Now form fields */
 
+.checkout-form .checkout-helper{
+    margin-bottom:26px;
+}
+
 .checkout-form .input-box{
     padding:10px 26px 14px;
     gap:8px;
@@ -23591,6 +23595,10 @@ height:110px;
 }
 
 @media (max-width:768px){
+
+.checkout-form .checkout-helper{
+    margin-bottom:30px;
+}
 
 .checkout-form .input-box{
     padding:10px 18px 13px;
@@ -25579,6 +25587,79 @@ html[dir="rtl"] .auth-theme-btn{
 html[dir="rtl"] .auth-rtl-btn{
     right:auto;
     left:84px;
+}
+
+@media(max-width:768px){
+    body:has(.auth-theme-btn),
+    body:has(.auth-rtl-btn){
+        position:relative;
+    }
+
+    .auth-theme-btn,
+    .auth-rtl-btn{
+        position:absolute;
+        top:14px;
+        width:42px;
+        height:42px;
+        font-size:16px;
+        z-index:1200;
+    }
+
+    .auth-theme-btn{
+        right:18px;
+    }
+
+    .auth-rtl-btn{
+        right:68px;
+    }
+
+    .login-section,
+    .register-section{
+        padding-top:78px;
+    }
+
+    html[dir="rtl"] .auth-theme-btn{
+        right:auto;
+        left:18px;
+    }
+
+    html[dir="rtl"] .auth-rtl-btn{
+        right:auto;
+        left:68px;
+    }
+}
+
+@media(max-width:480px){
+    .auth-theme-btn,
+    .auth-rtl-btn{
+        top:12px;
+        width:40px;
+        height:40px;
+        font-size:15px;
+    }
+
+    .auth-theme-btn{
+        right:16px;
+    }
+
+    .auth-rtl-btn{
+        right:62px;
+    }
+
+    .login-section,
+    .register-section{
+        padding-top:68px;
+    }
+
+    html[dir="rtl"] .auth-theme-btn{
+        right:auto;
+        left:16px;
+    }
+
+    html[dir="rtl"] .auth-rtl-btn{
+        right:auto;
+        left:62px;
+    }
 }
 
 /*=========================================
