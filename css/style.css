@@ -25014,6 +25014,16 @@ body.dark-mode .scroll-top-btn:hover{
     color:#fff;
 }
 
+body.dark-mode .cart-summary{
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
+
+body.dark-mode .summary-head{
+    background:transparent;
+    border:none;
+}
 body.dark-mode .dropdown-menu li:hover,
 body.dark-mode .coupon,
 body.dark-mode .summary-head,
@@ -25047,6 +25057,11 @@ body.dark-mode .input-box textarea{
     background:#242a33;
     color:#f4f4f5;
     border-color:#39404c;
+}
+
+body.dark-mode .summary-head{
+    background:transparent;
+    border:none;
 }
 
 body.dark-mode input::placeholder,
@@ -26743,5 +26758,395 @@ html[dir="rtl"] .hero-buttons{
 
     .hero-features{
         margin-top:42px;
+    }
+}
+
+/*=========================================
+        HERO AND BANNER POLISH
+=========================================*/
+
+.hero,
+.hero2,
+.about-banner,
+.bouquet-banner,
+.occasion-banner,
+.custom-banner,
+.order-banner,
+.contact-hero{
+    isolation:isolate;
+}
+
+.hero{
+    background:
+        linear-gradient(115deg, rgba(255,248,251,.96) 0%, rgba(255,240,246,.86) 50%, rgba(255,255,255,.72) 100%);
+}
+
+.hero .slide{
+    gap:clamp(36px, 6vw, 86px);
+    padding:clamp(58px, 7vw, 94px) 8% clamp(74px, 8vw, 108px);
+}
+
+.hero-content{
+    max-width:610px;
+}
+
+.sub-title,
+.hero-tag,
+.banner-tag,
+.banner-subtitle,
+.occasion-content .banner-subtitle,
+.contact-hero-content span{
+    display:inline-flex;
+    align-items:center;
+    width:max-content;
+    max-width:100%;
+    min-height:42px;
+    padding:10px 22px;
+    border:1px solid rgba(255,255,255,.34);
+    border-radius:999px;
+    background:rgba(255,255,255,.18);
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    line-height:1.35;
+    text-transform:uppercase;
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    box-shadow:0 12px 30px rgba(13,17,23,.12);
+}
+
+.hero .sub-title,
+.hero2 .hero-tag{
+    border-color:rgba(233,30,99,.16);
+    background:#fff;
+    color:#E91E63;
+    box-shadow:0 12px 28px rgba(233,30,99,.12);
+}
+
+.hero-content h1,
+.hero2-content h1,
+.banner-content h1,
+.occasion-banner .occasion-content h1,
+.custom-banner-content h1,
+.order-banner-content h1,
+.contact-hero-content h1{
+    max-width:12ch;
+    font-size:clamp(42px, 5.4vw, 72px);
+    line-height:1.05;
+    margin-bottom:22px;
+    font-weight:700;
+}
+
+.banner-content h1,
+.occasion-content h1,
+.custom-banner-content h1{
+    max-width:14ch;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.order-banner-content h1,
+.contact-hero-content h1{
+    max-width:11ch;
+}
+
+.hero-content p,
+.hero2-content p,
+.banner-content p,
+.occasion-banner .occasion-content p,
+.custom-banner-content p,
+.order-banner-content p,
+.contact-hero-content p{
+    max-width:64ch;
+    font-size:clamp(16px, 1.25vw, 19px);
+    line-height:1.75;
+}
+
+.hero-image{
+    align-items:center;
+}
+
+.hero-image img{
+    aspect-ratio:4 / 3;
+    object-fit:cover;
+    border:10px solid rgba(255,255,255,.76);
+    border-radius:28px;
+    box-shadow:0 28px 70px rgba(233,30,99,.22);
+}
+
+.hero2{
+    min-height:calc(100svh - 90px);
+    padding:clamp(72px, 8vw, 110px) 6%;
+}
+
+.hero2::before,
+.hero2::after,
+.occasion-banner::before,
+.occasion-banner::after,
+.custom-banner::before,
+.custom-banner::after,
+.bouquet-banner::before,
+.bouquet-banner::after{
+    opacity:.45;
+}
+
+.hero2-container{
+    min-height:clamp(520px, 68svh, 720px);
+    padding:clamp(44px, 6vw, 76px);
+    border:1px solid rgba(255,255,255,.58);
+    border-radius:28px;
+    box-shadow:0 28px 80px rgba(72,18,43,.16);
+}
+
+.hero2-image::before{
+    background:linear-gradient(90deg, rgba(255,248,248,.98) 0%, rgba(255,248,248,.82) 46%, rgba(255,248,248,.18) 100%);
+}
+
+.hero-features{
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.hero-features div{
+    min-width:132px;
+    padding:16px 18px;
+    border:1px solid rgba(233,30,99,.12);
+    border-radius:16px;
+    background:rgba(255,255,255,.72);
+    box-shadow:0 14px 32px rgba(233,30,99,.09);
+}
+
+.hero-features h3{
+    font-size:clamp(24px, 2.3vw, 34px);
+}
+
+.about-banner,
+.bouquet-banner,
+.occasion-banner,
+.custom-banner,
+.order-banner,
+.contact-hero{
+    height:auto;
+    min-height:clamp(500px, 68svh, 690px);
+    padding:clamp(88px, 10vw, 128px) 8%;
+    background-position:center;
+}
+
+.banner-overlay,
+.occasion-overlay,
+.custom-overlay,
+.order-banner::before{
+    background:linear-gradient(90deg, rgba(12,14,18,.78) 0%, rgba(38,13,26,.58) 52%, rgba(12,14,18,.36) 100%);
+}
+
+.contact-hero{
+    background:
+        linear-gradient(90deg, rgba(12,14,18,.78) 0%, rgba(38,13,26,.54) 54%, rgba(12,14,18,.35) 100%),
+        url("../images/cta-bg.jpg") center/cover no-repeat;
+}
+
+.banner-content,
+.occasion-banner .occasion-content,
+.custom-banner-content{
+    max-width:940px;
+}
+
+.order-banner-content,
+.contact-hero-content{
+    max-width:720px;
+}
+
+.breadcrumb{
+    width:max-content;
+    max-width:100%;
+    margin:0 auto;
+    padding:10px 18px;
+    border:1px solid rgba(255,255,255,.2);
+    border-radius:999px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+}
+
+.banner-feature{
+    min-height:48px;
+    box-shadow:0 14px 30px rgba(0,0,0,.14);
+}
+
+.hero-btn a,
+.hero-buttons a,
+.banner-buttons a,
+.contact-hero-actions a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:52px;
+    box-shadow:0 14px 32px rgba(233,30,99,.22);
+}
+
+.btn-outline,
+.explore-btn,
+.contact-outline-btn,
+.order-banner .contact-btn{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+}
+
+body.dark-mode .hero{
+    background:linear-gradient(115deg, #111317 0%, #171a20 54%, #1f242d 100%);
+}
+
+body.dark-mode .hero .sub-title,
+body.dark-mode .hero2 .hero-tag,
+body.dark-mode .hero-features div{
+    background:#1f242d;
+    border-color:#303641;
+    color:#ff7bad;
+    box-shadow:0 18px 44px rgba(0,0,0,.28);
+}
+
+body.dark-mode .hero2-container{
+    border-color:#303641;
+    box-shadow:0 28px 80px rgba(0,0,0,.35);
+}
+
+body.dark-mode .hero2-image::before{
+    background:linear-gradient(90deg, rgba(17,19,23,.98) 0%, rgba(17,19,23,.82) 48%, rgba(17,19,23,.28) 100%);
+}
+
+body.dark-mode .hero-image img{
+    border-color:rgba(48,54,65,.9);
+    box-shadow:0 28px 70px rgba(0,0,0,.42);
+}
+
+@media(max-width:991px){
+    .hero .slide,
+    .hero .slide.active{
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:28px;
+    }
+
+    .hero-content,
+    .hero2-content,
+    .order-banner-content,
+    .contact-hero-content{
+        max-width:720px;
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-content h1,
+    .hero2-content h1,
+    .order-banner-content h1,
+    .contact-hero-content h1{
+        max-width:13ch;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-content p,
+    .hero2-content p,
+    .order-banner-content p,
+    .contact-hero-content p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-btn,
+    .hero-buttons,
+    .banner-features,
+    .order-banner .banner-buttons,
+    .contact-hero-actions{
+        justify-content:center;
+        width:100%;
+    }
+
+    .hero-image img{
+        max-width:min(520px, 100%);
+        max-height:none;
+    }
+
+    .hero2-container{
+        min-height:auto;
+        padding:44px 28px;
+    }
+
+    .hero2-image::before{
+        background:rgba(255,248,248,.86);
+    }
+
+    body.dark-mode .hero2-image::before{
+        background:rgba(17,19,23,.86);
+    }
+}
+
+@media(max-width:640px){
+    .hero,
+    .hero2,
+    .about-banner,
+    .bouquet-banner,
+    .occasion-banner,
+    .custom-banner,
+    .order-banner,
+    .contact-hero{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .hero .slide{
+        padding:36px 20px 64px;
+    }
+
+    .hero-content h1,
+    .hero2-content h1,
+    .banner-content h1,
+    .occasion-banner .occasion-content h1,
+    .custom-banner-content h1,
+    .order-banner-content h1,
+    .contact-hero-content h1{
+        max-width:100%;
+        font-size:clamp(32px, 10vw, 42px);
+        line-height:1.12;
+    }
+
+    .sub-title,
+    .hero-tag,
+    .banner-tag,
+    .banner-subtitle,
+    .occasion-content .banner-subtitle,
+    .contact-hero-content span{
+        width:auto;
+        justify-content:center;
+        white-space:normal;
+    }
+
+    .hero-image img{
+        border-width:7px;
+        border-radius:20px;
+    }
+
+    .hero-features{
+        width:100%;
+        gap:12px;
+    }
+
+    .hero-features div{
+        flex:1 1 100%;
+        min-width:0;
+    }
+
+    .breadcrumb{
+        width:100%;
+        justify-content:center;
+        font-size:15px;
+    }
+
+    .banner-feature{
+        width:100%;
+        justify-content:center;
     }
 }
