@@ -9369,7 +9369,13 @@ border:3px solid #333;
 
     text-align:left;
 
-    margin-bottom:30px;
+    width:max-content;
+
+    max-width:100%;
+
+    margin:0 auto 30px;
+
+    padding:0;
 
 }
 
@@ -14347,6 +14353,37 @@ right:20px;
 
 flex-direction:column;
 text-align:center;
+
+}
+
+.why-features,
+.choose-features,
+.why-choose-features,
+.why-choose-list,
+.why-list,
+.benefits-list,
+.auth-benefits,
+.features-list,
+.feature-list,
+.points-list{
+
+width:max-content;
+max-width:100%;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+.why-feature,
+.choose-feature,
+.why-choose-feature,
+.why-point,
+.benefit-item,
+.auth-benefit,
+.feature-item,
+.point-item{
+
+justify-content:flex-start;
 
 }
 
@@ -20435,7 +20472,15 @@ text-align:center;
 
 .info-item{
 
-justify-content:center;
+justify-content:flex-start;
+
+width:100%;
+
+max-width:310px;
+
+margin-left:auto;
+
+margin-right:auto;
 
 }
 
@@ -20486,6 +20531,14 @@ line-height:1.7;
 .info-item{
 
 justify-content:flex-start;
+
+width:100%;
+
+max-width:310px;
+
+margin-left:auto;
+
+margin-right:auto;
 
 margin-bottom:18px;
 
@@ -22572,11 +22625,19 @@ margin-bottom:30px;
 
 }
 
-.cta-features{
+.custom-cta .cta-features{
 
 flex-direction:column;
 
-align-items:flex-start;
+align-items:stretch;
+
+width:max-content;
+
+max-width:100%;
+
+margin-left:auto;
+
+margin-right:auto;
 
 gap:15px;
 
@@ -24399,11 +24460,13 @@ font-size:16px;
 
 .login-options{
 
-flex-direction:column;
+flex-direction:row;
 
-align-items:flex-start;
+align-items:center;
 
-gap:12px;
+justify-content:space-between;
+
+gap:16px;
 
 margin:15px 0 25px;
 
@@ -25492,15 +25555,15 @@ body.dark-mode .map-box{
 .auth-theme-btn,
 .auth-rtl-btn{
     position:absolute;
-    top:24px;
-    right:24px;
-    width:48px;
-    height:48px;
+    top:22px;
+    right:22px;
+    width:40px;
+    height:40px;
     border-radius:50%;
     border:2px solid #E91E63;
     background:#fff;
     color:#E91E63;
-    font-size:18px;
+    font-size:15px;
     cursor:pointer;
     z-index:1000;
     transition:.3s;
@@ -25508,7 +25571,7 @@ body.dark-mode .map-box{
 }
 
 .auth-rtl-btn{
-    right:84px;
+    right:70px;
 }
 
 .auth-theme-btn:hover,
@@ -25586,12 +25649,12 @@ html[dir="rtl"] .register-group i{
 
 html[dir="rtl"] .auth-theme-btn{
     right:auto;
-    left:24px;
+    left:22px;
 }
 
 html[dir="rtl"] .auth-rtl-btn{
     right:auto;
-    left:84px;
+    left:70px;
 }
 
 @media(max-width:768px){
