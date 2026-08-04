@@ -2508,12 +2508,25 @@ transform:translateY(0);
     display:flex;
     justify-content:center;
     align-items:center;
-    transition:.4s;
+    transition:.3s;
+    text-decoration:none;
 }
 
 .social-links a:hover{
     background:#E91E63;
+    color:#FFFFFF;
     transform:translateY(-5px);
+}
+.footer-social a i{
+
+    transition:.3s;
+
+}
+
+.footer-social a:hover i{
+
+    color:#FFFFFF;   /* Ensure icon becomes white */
+
 }
 
 /* Bottom */
@@ -12065,6 +12078,16 @@ border:3px solid #333;
 
     color:#555;
 
+    gap:15px;
+
+    color:#555;
+
+}
+
+.cart-summary div strong{
+
+    margin-left:15px;
+
 }
 
 .cart-summary hr{
@@ -13534,6 +13557,8 @@ select{
 
     transition:.3s;
 
+    background:#F5F5F5;
+
 }
 
 .social-login a:hover{
@@ -13542,7 +13567,61 @@ select{
 
     color:#fff;
 
-    transform:translateY(-4px);
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.social-login a:nth-child(1){
+
+    color:#DB4437;
+
+}
+.social-login a:nth-child(1):hover{
+
+    background:#DB4437;
+
+}
+.social-login a:nth-child(1):hover i{
+
+    color:#fff !important;
+
+}
+.social-login a:nth-child(2){
+
+    color:#1877F2;
+
+}
+
+.social-login a:nth-child(2):hover{
+
+    background:#1877F2;
+
+}
+
+.social-login a:nth-child(2):hover i{
+
+    color:#fff !important;
+
+}
+
+/* Apple */
+
+.social-login a:nth-child(3){
+
+    color:#000;
+
+}
+.social-login a:nth-child(3):hover{
+
+    background:#000;
+
+}
+
+.social-login a:nth-child(3):hover i{
+
+    color:#fff !important;
 
 }
 
@@ -13961,6 +14040,8 @@ select{
 
     transition:.3s;
 
+    background:#F5F5F5;
+
 }
 
 .register-social a:hover{
@@ -13972,7 +14053,44 @@ select{
     transform:translateY(-4px);
 
 }
+/* Google */
+.register-social a:nth-child(1){
+    color:#DB4437;
+}
 
+.register-social a:nth-child(1):hover{
+    background:#DB4437;
+}
+
+.register-social a:nth-child(1):hover i{
+    color:#fff;
+}
+
+/* Facebook */
+.register-social a:nth-child(2){
+    color:#1877F2;
+}
+
+.register-social a:nth-child(2):hover{
+    background:#1877F2;
+}
+
+.register-social a:nth-child(2):hover i{
+    color:#fff;
+}
+
+/* Apple */
+.register-social a:nth-child(3){
+    color:#000;
+}
+
+.register-social a:nth-child(3):hover{
+    background:#000;
+}
+
+.register-social a:nth-child(3):hover i{
+    color:#fff;
+}
 /*=========================================
         LOGIN LINK
 =========================================*/
