@@ -969,6 +969,10 @@ addButtons.forEach(button=>{
         const price = Number(button.dataset.price);
         const image = button.dataset.image;
 
+        if(!name || !image || !Number.isFinite(price)){
+            return;
+        }
+
         const existing = cart.find(item=>item.name===name);
 
         if(existing){

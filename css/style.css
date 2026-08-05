@@ -28065,3 +28065,8 @@ body.dark-mode .login-section .social-login a:hover{
         text-shadow:0 2px 12px rgba(0,0,0,.68);
     }
 }
+
+/* Disable inert order-page add-to-cart buttons */
+.shop-section .add-cart{
+    pointer-events:none;
+}
