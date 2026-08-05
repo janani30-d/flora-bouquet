@@ -25249,6 +25249,32 @@ body.dark-mode .register-social a:hover{
     border-color:#E91E63;
 }
 
+body.dark-mode .social-login a:nth-child(1):hover,
+body.dark-mode .register-social a:nth-child(1):hover{
+    background:#DB4437;
+    border-color:#DB4437;
+    color:#fff;
+}
+
+body.dark-mode .social-login a:nth-child(2):hover,
+body.dark-mode .register-social a:nth-child(2):hover{
+    background:#1877F2;
+    border-color:#1877F2;
+    color:#fff;
+}
+
+body.dark-mode .social-login a:nth-child(3):hover,
+body.dark-mode .register-social a:nth-child(3):hover{
+    background:#000;
+    border-color:#000;
+    color:#fff;
+}
+
+body.dark-mode .social-login a:hover i,
+body.dark-mode .register-social a:hover i{
+    color:#fff;
+}
+
 body.dark-mode .category-list li a:hover,
 body.dark-mode .category-list a.active{
     color:#ff6fa3;
@@ -27558,4 +27584,45 @@ body.dark-mode .hero-image img{
         margin-left:auto;
         margin-right:auto;
     }
+}
+
+/*=========================================
+    MOBILE POINT ALIGNMENT FIXES
+=========================================*/
+
+@media (max-width:480px){
+
+.mission-card ul,
+.vision-card ul,
+.newsletter-features,
+.custom-cta .cta-features{
+
+    width:fit-content;
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.mission-card ul li,
+.vision-card ul li,
+.newsletter-features .feature,
+.custom-cta .cta-feature{
+
+    width:100%;
+    justify-content:flex-start;
+    align-items:center;
+    text-align:left;
+
+}
+
+.mission-card ul li i,
+.vision-card ul li i,
+.newsletter-features .feature i,
+.custom-cta .cta-feature i{
+
+    flex:0 0 auto;
+
+}
+
 }
