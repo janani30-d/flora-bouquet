@@ -28070,3 +28070,44 @@ body.dark-mode .login-section .social-login a:hover{
 .shop-section .add-cart{
     pointer-events:none;
 }
+
+/* Keep Facebook official blue in auth dark mode */
+body.dark-mode .login-section .social-login a:nth-child(2),
+body.dark-mode .register-section .facebook-btn{
+    color:#1877F2;
+}
+
+body.dark-mode .register-section .facebook-btn i{
+    color:#1877F2;
+}
+
+/* Keep register social icons unchanged on hover */
+.register-section .social-buttons a:hover,
+.register-section .apple-btn:hover,
+.register-section .facebook-btn:hover{
+    background:#fff;
+    transform:none;
+    box-shadow:none;
+}
+
+.register-section .apple-btn:hover{
+    color:#111;
+}
+
+.register-section .facebook-btn:hover,
+.register-section .facebook-btn:hover i{
+    color:#1877F2;
+}
+
+body.dark-mode .register-section .social-buttons a:hover,
+body.dark-mode .register-section .apple-btn:hover,
+body.dark-mode .register-section .facebook-btn:hover{
+    background:#242a33;
+    color:#fff;
+    border-color:#303641;
+}
+
+body.dark-mode .register-section .facebook-btn:hover,
+body.dark-mode .register-section .facebook-btn:hover i{
+    color:#1877F2;
+}
